@@ -1,27 +1,2 @@
 # hello-world
 此存储库用于练习GitHub流
-{
-  "name": "freeCodeCampDC",
-  "dockerComposeFile": "docker-compose.yml",
-  "service": "devcontainer",
-  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-  "forwardPorts": [3000, 8000],
-  "portsAttributes": {
-    "3000": {
-      "label": "API",
-      "onAutoForward": "silent"
-    },
-    "8000": {
-      "label": "Client",
-      "onAutoForward": "notify"
-    }
-  },
-  "otherPortsAttributes": {
-    "onAutoForward": "silent"
-  },
-  "onCreateCommand": "[ ! -f .env ] && cp sample.env .env || true",
-  "updateContentCommand": "pnpm install && pnpm seed",
-  "postAttachCommand": {
-    "instructions": "bash -c 'echo \"\n\n\n Start a new terminal and run \\`pnpm run develop\\` when you are ready.\n\n\n\"'"
-  }
-}
